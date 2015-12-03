@@ -12,31 +12,29 @@ header {
 
 header h1 {
     margin: 0;
-    color: chocolate; 
+    color: #FF4A14; 
     padding: 1em;
-    text-align:center
+    text-align:center;
 }
 
 header h3 {
     margin: 0;
-    color: brown; 
+    color: ##FF4A14; 
     padding: 1em;
     text-align:center
 }
-
 section {
     width: 100%;
 }
 
 section#seccion_principal {
-    background-color: white;  
-    color:darkred
+    color:#333;
      
 }
 
 section#seccion_principal ul a {
     
-    color:red;
+    color:#FF4A14;
     font-weight:bold;
     font-size:1.5em;
     text-decoration: none; 
@@ -52,16 +50,49 @@ ul {
     list-style: none;
 }
 
+.desc {
+    padding: 2em;
+}
+
 footer {
     margin: 0;
     padding: 3em 0;
     width: 100%;
     
-    color:black;
+    color:#FF4A14;
     font-weight:bold;
     text-align:center;
     font-size:1.1em;
 }
 
 
+nav ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
 
+nav li{
+ width:50%;
+ float:left;
+  
+}
+
+.il_back a:hover:not(.active) {
+    background-color: #111;
+}
+
+
+nav li a{
+    display:block;
+    color: white;
+    text-align: center;
+    padding: 2% 5%;
+    text-decoration: none;
+}
+
+
+.il_header{
+    background-color:#FF4A14;
+}

@@ -10,26 +10,45 @@
                 <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
+	
+                <nav>
+                  <ul class="navigator_ul">
+                    <li class="il_header">
+                         <a href="#"> IPM-Practica  </a> 
+                    </li>
+                        
+                    </li>                       
+                 </ul>
+               </nav>
+               
                 <header>
                         <h1>Pedidor</h1>
-                        <h3>Repositorio: ipm1516_050_p3 & ipm1516_162_p3</h3>
+                        <h3>Repositorios ipm1516_050_p3 & ipm1516_162_p3</h3>
                 </header>
 
-		<form>
-			<input id="button" type="submit" name="summit_nuevo_pedido" value="Nuevo pedido" />
-		</form>
-
 		<section id="seccion_principal">
-			<h3> Hola </h3>
+        		<form>
+        			<input id="button" type="submit" name="summit_nuevo_pedido" value="Nuevo pedido" />
+        		</form>
+			<h3>Lista de Pedidos</h3>
 			<ul id="lista_pedidor">
+                                <li id="elemento-head">
+                                        <span class="elemento-head-item">Item</span>
+                                        <span class="elemento-head-fecha">Fecha</span>
+				</li>
 				<li id="elemento-1">
-					<a href="detalle.html"> Nombre </a>
-					<span class="desc">Fecha</span>
+					<a href="detalle.html">Ratones</a>
+					<span class="desc">1 enero</span>
 				</li>
 				<li id="elemento-2">
-					<a href="detalle.html"> Nombre </a>
-					<span class="desc">Fecha</span>
+					<a href="detalle.html">Pantallas</a>
+					<span class="desc">2 febrero</span>
 				</li>
+				<li id="elemento-3">
+					<a href="detalle.html">Impresoras</a>
+					<span class="desc">3 marzo</span>
+				</li>
+
 			</ul>
 		</section>
 
@@ -45,7 +64,6 @@
                 <footer>
                     Interfaces Persona Máquina
                 </footer>
-
 	</body>
 </html>
 
