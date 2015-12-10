@@ -20,7 +20,7 @@ header h1 {
 
 header h3 {
     margin: 0;
-    color: ##FF4A14; 
+    color: #FF4A14; 
     padding: 0.2em;
     text-align:center
 }
@@ -116,7 +116,7 @@ section#seccion_principal ul li{
 
 section#seccion_secundaria  {
 	text-align:center;
-	border: 1px solid #0000;
+	border: 1px solid #000;
 	background-color: #CED5D7;
 	border-radius: 6px;	
 	box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #EEF5F7 inset;	
@@ -124,9 +124,8 @@ section#seccion_secundaria  {
 
 
 .il_back a:hover:not(.active) {
-    background-color: #111 no-repeat center center;
     color: #FFFFFF;  
-	font-size:1.05em;    
+    font-size:1.05em;    
 }
 
 .il_header {	
