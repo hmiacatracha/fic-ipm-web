@@ -1,0 +1,80 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+
+input#button {
+  height: 50px;
+  width: 50px;
+}
+
+#wrapper { 
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+nav {
+  padding:2em;
+}
+
+nav li {
+  float:left;
+}
+
+header {
+  clear:both;
+  text-align:center;
+  color: #FF4A14; 
+  padding: 0.5em;
+}
+
+
+section#seccion_secundaria {
+  padding: 1em;
+  margin-top: 1em;
+  border: 1px solid #000;
+  border-radius: 6px;     
+  box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #EEF5F7 inset;     
+  text-align:center;
+}
+
+label,input {
+    display:inline-block;
+    
+}
+
+p#p1 { margin:4em; }
+
+label {
+  width:50px;
+  text-align:right;
+  margin-right:10px;
+}
+
+input {
+    width:150px;
+}
+
+footer {
+    padding: 0.5em 0;
+    text-align:center;
+}
+
+/* Para tabletas */
+@media only screen and (min-width:600px) {
+  #wrapper { 
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* Para Escritorio */
+@media only screen and (min-width:810px) {
+  #wrapper { 
+    width: 810px;
+    margin: 0 auto;
+  }
+}
+
