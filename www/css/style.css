@@ -30,13 +30,28 @@ section {
     padding:1.3em;
 }
 
+label,input {
+    display:inline-block;
+}
+
+label {
+  width:50px;
+  text-align:right;
+  margin-right:10px;
+}
+
+input {
+    width:200px;
+}
+
 input#button{
-	height: 50px;
+    height: 50px;
     width: 50px;
     border-radius: 50px;
     border: 1px hidden #000;
     text-align: center;
 }
+
 
 section#seccion_principal ul a {
     
@@ -122,20 +137,17 @@ nav li a{
     display:block;
     color:#FFF5E8;
     text-align: center;
-	margin: 0;    
+    margin: 0;    
     padding: 3% 5%;
     text-decoration: none;
 }
-
-
-
 
 div{
 	display:inline-block;
 }
 
 /* Para tabletas */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width:600px) {
 	body { 
 		background-color: #FDE0BF;		
 		padding-left:5%;
@@ -157,9 +169,9 @@ div{
 }	
 
 /* Para Escritorio */
-@media only screen and (min-width: 810px) {
+@media only screen and (min-width:810px) {
 	body { 
-	    background-color: #FDE0BF;	
+	    background-color:#FDE0BF;	
 		padding-left:10%;
 		padding-right:10%;		
 	}
