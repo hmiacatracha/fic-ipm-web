@@ -6,6 +6,7 @@
 		<title>Pedidor</title>
 		<meta name="author" content="ipm1516_050_p3" />
 		<meta name="author" content="ipm1516_162_p3" />
+		<meta name="viewport" content="device-width, initial-scale=1, maximum-scale=1">
                 <link rel="stylesheet" type="text/css" href="css/style.css" />
                 <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
 	</head>
@@ -28,14 +29,11 @@
 
 		<section id="seccion_principal">
         		<form>
-        			<input id="button" type="submit" name="summit_nuevo_pedido" value="Nuevo pedido" />
+        			<input id="button" type="image" src="img/orange_plus.png" 
+        			alt="Añadir producto" value="Nuevo pedido" />
         		</form>
 			<h3>Lista de Pedidos</h3>
-			<ul id="lista_pedidor">
-                                <li id="elemento-head">
-                                        <span class="elemento-head-item">Item</span>
-                                        <span class="elemento-head-fecha">Fecha</span>
-				</li>
+			<ul id="lista_pedidor">                                
 				<li id="elemento-1">
 					<a href="detalle.html">Ratones</a>
 					<span class="desc">1 enero</span>
@@ -49,16 +47,37 @@
 					<span class="desc">3 marzo</span>
 				</li>
 
+				<li id="elemento-4">
+					<a href="detalle.html">Impresoras</a>
+					<span class="desc">3 marzo</span>
+				</li>
+
+				<li id="elemento-4">
+					<a href="detalle.html">Impresoras</a>
+					<span class="desc">3 marzo</span>
+				</li>
+				<li id="elemento-5">
+					<a href="detalle.html">Impresoras</a>
+					<span class="desc">3 marzo</span>
+				</li>								
 			</ul>
 		</section>
 
 		<section id="seccion_secundaria">
 			<h3> Nuevo pedido</h3>
-			<form>
-				<input name="text_nombre" value="" type="text"/>
-				<input name="text_fecha" value="" type="text"/>
-				<input type="submit" name="sumit_aceptar" value="Aceptar" />
-				<input type="submit" name="sumit_cancelar" value="Cancelar" />
+			<form class="pedido">
+				<div> 
+					<label>Nombre </label> 
+					<input name="text_nombre" value="" type="text" required/>
+				</div>
+				<div>
+					<label> Fecha</label>
+					<input name="text_fecha" value="" type="date" required/>
+				</div>				
+				<div>
+					<input type="submit" name="sumit_aceptar" value="Aceptar" />
+					<input type="submit" name="sumit_cancelar" value="Cancelar" />				
+				</div>
 			</form>
 		</section>
                 <footer>
