@@ -69,6 +69,12 @@ nav li a {
    
 }
 
+section#seccion_principal ul a{
+  color:#FF4A14;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
 section#seccion_secundaria {
   padding: 1em;
   margin-top: 1em;
