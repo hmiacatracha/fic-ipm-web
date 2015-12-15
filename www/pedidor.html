@@ -20,6 +20,7 @@
 							<a href="#"> IPM-Practica  </a>
 						</li>
 
+
 					</ul>
 				</nav>
 			</div>
@@ -29,8 +30,9 @@
 			</header>
 
 			<section id="seccion_principal_p">
-				<form>
-					<input id="nuevo" type="button" alt="Añadir producto" class="nuevo_btn"/>
+				<form id="nuevo">
+					<input id="nuevo_btn" type="button" alt="Añadir producto"
+						name="nuevo_btn" onclick="show_seconday_section()" />
 				</form>
 				<h3>Lista de Pedidos</h3>
 				<ul id="lista_pedidor">
@@ -69,15 +71,17 @@
 				<form class="pedido">
 					<div class="sec_2_form_row">
 						<label>Nombre </label>
-						<input id=nombreInput" name="text_nombre" value="" type="text"/>
+						<input id=nombreInput " name="text_nombre" value="" type="text"/>
 					</div>
 					<div class="sec_2_form_row">
 						<label>Fecha</label>
 						<input id="fechaInput" name="text_fecha" value="" type="date"/>
 					</div>
 					<div class="sec_2_form_row">
-						<input id="aceptarButton" type="submit" name="sumit_aceptar" value="Aceptar" />
-						<input id="cancelarButton" type="submit" name="sumit_cancelar" value="Cancelar" />
+						<input id="aceptarButton" type="submit" name="sumit_aceptar"
+							value="Aceptar" />
+						<input id="cancelarButton" type="submit" name="sumit_cancelar"
+							value="Cancelar" />
 					</div>
 
 				</form>
