@@ -112,15 +112,15 @@ section#seccion_secundaria {
   text-align:center;
 }
 
-input.nuevo_btn {
-  background-image: url(../img/orange_plus.png);
+#nuevo_btn {
+  background-image: url(../img/orange_plus_small.png);
   background-repeat:no-repeat;
   background-color: transparent;
   background-position: 0px 0px; 
   cursor: pointer;
   border: none;  
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
 }
 
 #wrapper { 
