@@ -1,19 +1,20 @@
 var moduloModule = (function () {
 
 	var principal = {
-		nuevoB:document.getElementById("button"),
+		nuevoB:document.getElementById("nuevo_btn"),
 		spp:document.getElementById("seccion_principal_p"),
 		listaP : document.getElementById("lista_pedidor"),				
 	};
 
 	var principal_d = {
 		listaD: document.getElementById("lista_detalle"),
-		spd:document.getElementById("seccion_principal_d"),		
+		spd:document.getElementById("seccion_principal_d"),
+		nombre:document.getElementById("detallePedido"),		
 
 	};
 
 	var secundaria = {
-		ssp:document.getElementById("seccion_principal_p"),
+		ssp:document.getElementById("seccion_secundaria"),
 		nombreI:document.getElementById("nombreInput"),
 		fechaI:document.getElementById("fechaInput"),
 		cancelarB:document.getElementById("cancelarButton"),
@@ -22,14 +23,14 @@ var moduloModule = (function () {
 
 
 	function init() {
-		console.log("init");	
+		console.log("init");
 		bindUIActions();		
 	};
 
 	function bindUIActions () {
 		secundaria.cancelarB.onclick = doCancelar;
 		secundaria.aceptarB.onclick = doAceptar;
-		/*principal.nuevoB.onclick = doNuevo;*/			
+		principal.nuevoB.onclick = doNuevo;			
 	};
 
 	function doAceptar(){
@@ -53,7 +54,7 @@ var moduloModule = (function () {
 
 	function doLimpiar(){
 		console.log("doLimpiar");
-		secundaria.ssp.display = 'none';			
+		secundaria.ssp.style.display="none";
 		secundaria.fechaI.value = "";
 		secundaria.nombreI.value = "";		
 	};
@@ -66,13 +67,15 @@ var moduloModule = (function () {
 	function doCancelar(){
 		console.log("doCancelar");	
 		doLimpiar();
-	}
-
+	};
+	
     	return {			
-		init: init
+	  init: init
     	};			
 })();
 
 moduloModule.init();
+
+
 
 

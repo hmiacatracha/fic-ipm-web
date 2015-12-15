@@ -103,7 +103,7 @@ section#seccion_principal ul a{
 }
 
 section#seccion_secundaria {
-  /*display: none;*/
+  display: none;
   padding: 1em;
   margin-top: 1em
   border: 1px solid #000;
