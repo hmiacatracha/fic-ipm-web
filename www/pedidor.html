@@ -9,6 +9,7 @@
 		<meta name="viewport" content="device-width, initial-scale=1, maximum-scale=1">
                 <link rel="stylesheet" type="text/css" href="css/new_style.css" />
                 <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+                <script src="js/test.js"> </script>
 	</head>
 	<body>
           <div id="wrapper">
@@ -31,9 +32,10 @@
         		<form>
         			<input 
                                   id="nuevo" 
-                                  type="image" 
-                                  src="img/orange_plus.png" 
-                                  alt="Añadir producto"/>
+                                  type="button" 
+                                  alt="Añadir producto"
+                                  class="nuevo_btn"
+                                  onclick="show_seconday_section()"/>
         		</form>
 			<h3>Lista de Pedidos</h3>
 			<ul id="lista_pedidor">                                

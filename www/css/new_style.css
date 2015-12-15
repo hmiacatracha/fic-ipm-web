@@ -67,7 +67,6 @@ nav li a {
   padding: 1em 1.143em;
 }
 
-
 .li_header{
    background-color: #FF4A14;
    width:50%;
@@ -113,7 +112,13 @@ section#seccion_secundaria {
   text-align:center;
 }
 
-input#nuevo {
+input.nuevo_btn {
+  background-image: url(../img/orange_plus.png);
+  background-repeat:no-repeat;
+  background-color: transparent;
+  background-position: 0px 0px; 
+  cursor: pointer;
+  border: none;  
   height: 50px;
   width: 50px;
 }
