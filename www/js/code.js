@@ -76,24 +76,63 @@
 // moduloModule.init();
 
 // Show secondary section
-function ShowSecondarySection () {
+function showSecondarySection () {
+
+    // Resets secondary section form before showing
+    document.getElementById('sec_2_form').reset();
+
     var s = document.getElementById('seccion_secundaria');
     s.style.display = 'block';
 }
 
 // Hide secondary section
-function HideSecondarySection () {
+function hideSecondarySection () {
     var s = document.getElementById('seccion_secundaria');
     s.style.display = 'none';
+}
+
+function addRowSecondarySection(name, date) {
+    var lista_pedidor = document.getElementById("lista_pedidor");
+
+    // Created hyperlink, set url and name
+    var a = document.createElement('a');
+    a.href = "detalle.html";
+    a.innerHTML = name; 
+
+    // Create span set date
+    var span = document.createElement('span');
+    span.innerHTML = date;
+    // TODO span or maybe a element lack some styles
+
+    var li = document.createElement('li');
+    li.appendChild(a);
+    li.appendChild(span);
+    lista_pedidor.appendChild(li);
+}
+
+
+function proccessData () {
+    var name = document.getElementById("nombreInput").value;
+    var date =  document.getElementById("fechaInput" ).value;
+    console.log("proccessData: Nombre: " + name);
+    console.log("proccessData: Fecha: " + date);
+
+    addRowSecondarySection(name, date);
 }
 
 function onClickBinds () {
     // set nuevo_btn behaviour: shows secondary section
     var nuevo_btn = document.getElementById("nuevo_btn");
-    nuevo_btn.onclick = ShowSecondarySection;                     
+    nuevo_btn.onclick = showSecondarySection;                     
+
+    var submit_cancelar = document.getElementById("submit_cancelar");
+    submit_cancelar.onclick = hideSecondarySection;
+
+    var submit_aceptar = document.getElementById("submit_aceptar");
+    submit_aceptar.onclick = proccessData;
 }
 
 // Flow starts here
-HideSecondarySection();
+hideSecondarySection();
 onClickBinds();
 

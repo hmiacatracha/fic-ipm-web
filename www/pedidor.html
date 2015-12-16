@@ -6,7 +6,7 @@
 		<title>Pedidor</title>
 		<meta name="author" content="ipm1516_050_p3" />
 		<meta name="author" content="ipm1516_162_p3" />
-		<meta name="viewport" content="device-width, initial-scale=1, maximum-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
                 <link rel="stylesheet" type="text/css" href="css/new_style.css" />
                 <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
 	</head>
@@ -36,27 +36,28 @@
                                     value=" "/>
         		</form>
 			<h3>Lista de Pedidos</h3>
-			<ul id="lista_pedidor"></ul> <!-- This is populated with Javascript -->
+			<ul id="lista_pedidor"></ul> <!-- This ul is populated from Javascript -->
 		</section>
 
-		<section id="seccion_secundaria">
+		<section id="seccion_secundaria"> <!-- Seccion secundaria is hidden by default -->
 			<h3> Nuevo pedido</h3>
-			<form class="pedido">
+			<form id="sec_2_form" class="pedido">
 				<div class="sec_2_form_row">
-					<label>Nombre </label> 
-					<input name="text_nombre" value="" type="text" required/>
+					<label>Nombre</label> 
+					<input id="nombreInput" name="text_nombre" type="text" required/>
 				</div>
 				<div class="sec_2_form_row">
 					<label>Fecha</label>
-					<input name="text_fecha" value="" type="date" required/>
+					<input id="fechaInput" name="text_fecha" type="date" required/>
 				</div>				
 				<div class="sec_2_form_row">
-					<input type="submit" name="sumit_aceptar" value="Aceptar" />
-					<input type="submit" name="sumit_cancelar" value="Cancelar" />				
+					<input id="submit_aceptar" type="button" name="submit_aceptar" value="Aceptar" />
+					<input id="submit_cancelar" type="button" name="submit_cancelar" value="Cancelar" />				
                                 </div>
 				
 			</form>
 		</section>
+
                 <footer>
                     Interfaces Persona Máquina
                 </footer>
