@@ -1,80 +1,3 @@
-// var moduloModule = (function () {
-// 
-//     var principal = {
-//             nuevoB:document.getElementById("nuevo_btn"),
-//             spp:document.getElementById("seccion_principal_p"),
-//             listaP : document.getElementById("lista_pedidor"),                              
-//     };
-// 
-//     var principal_d = {
-//             listaD: document.getElementById("lista_detalle"),
-//             spd:document.getElementById("seccion_principal_d"),
-//             nombre:document.getElementById("detallePedido"),                
-// 
-//     };
-// 
-//     var secundaria = {
-//             ssp:document.getElementById("seccion_secundaria"),
-//             nombreI:document.getElementById("nombreInput"),
-//             fechaI:document.getElementById("fechaInput"),
-//             aceptarB:document.getElementById("aceptarButton"),
-//             cancelarB:document.getElementById("cancelarButton"),
-//     };
-// 
-// 
-//     function init() {
-//             console.log("init");
-//             bindUIActions();                
-//     };
-// 
-//     function bindUIActions () {
-//             principal.nuevoB.onclick = doNuevo;                     
-//             secundaria.aceptarB.onclick = doAceptar;
-//             secundaria.cancelarB.onclick = doCancelar;
-//     };
-//     function doAceptar(){
-//             console.log("doAceptar");       
-//             var nombre = secundaria.nombreI.value;  
-//             var fecha = secundaria.fechaI.value;
-//                     
-//             if (nombre == "" && fecha == "") {
-//                     alert ("Introduzca los datos del formulario");
-//             } else if (nombre == "") {
-//                     alert("Introduzca el nombre");
-//             } else if (fecha == "") {
-//                     alert("Introduzca la fecha");
-//             }else {
-//                     //añadir los datos
-//                     doLimpiar();
-//             }
-// 
-//                             
-//     };
-// 
-//     function doLimpiar(){
-//             console.log("doLimpiar");
-//             secundaria.ssp.style.display="none";
-//             secundaria.fechaI.value = "";
-//             secundaria.nombreI.value = "";          
-//     };
-// 
-//     function doNuevo () {
-//             console.log("doNuevo"); 
-//             secundaria.ssp.style.display = 'block';
-//     };
-// 
-//     function doCancelar(){
-//             console.log("doCancelar");      
-//             doLimpiar();
-//     };
-//     
-//             return {                        
-//       init: init
-//             };                      
-// })();
-// 
-// moduloModule.init();
-
 // Show secondary section
 function showSecondarySection () {
     console.log("showSecondarySection");
@@ -116,9 +39,12 @@ function addRowSecondarySection(name, date) {
     li.appendChild(a);
     li.appendChild(span);
     lista_pedidor.appendChild(li);
+
+    // Lastly, clean form
+    document.getElementById('sec_2_form').reset();
 }
 
-
+// Proccess user input
 function proccessData () {
     var name = document.getElementById("nombreInput").value;
     var date = document.getElementById("fechaInput" ).value;
@@ -126,11 +52,15 @@ function proccessData () {
     console.log("proccessData: Fecha: " + date);
 
     // Populate ul list from seccion principal
-    addRowSecondarySection(name, date);
+    if (name!== "") {
+        addRowSecondarySection(name, date);
+    }
 
     // Save data until tab or browser is closed
-    window.sessionStorage.setItem("name", name);
-    window.sessionStorage.setItem("date", date);
+    data = "{name:" + name + ", date:" + date + "}" // store data as JSON format
+    window.sessionStorage.setItem(sessionStorage.length, data); // Use number of elements as key
+
+    console.log("proccessData: localStorage current number of items: " + sessionStorage.length);
 }
 
 function onClickBinds () {
@@ -147,7 +77,26 @@ function onClickBinds () {
     submit_aceptar.onclick = proccessData;
 }
 
+function reloadData() {
+    for(var i=0; i<sessionStorage.length; i++) {
+
+        // Use number of elements as key
+        var item = window.sessionStorage.getItem(i);
+
+        // Parse JSON (I know, i'am doing it by hand ;-)
+        var a = item.indexOf("name:");
+        var b = item.indexOf(", date:");
+        var name = item.substring(a + "name:".length, b);
+        var date = item.substring(b + ", date: ".length-1, item.length-1);
+
+        console.log("reloadData:" + i + " : " + name + " " + date);
+        // TODO characters with accents display uncorrectly
+
+        addRowSecondarySection(name, date);
+    }
+}
+
 // Flow starts here
 hideSecondarySection();
 onClickBinds();
-
+reloadData();
