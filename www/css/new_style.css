@@ -87,20 +87,21 @@ nav li a {
     font-size:1.09em;    
 }
 
-section#seccion_principal ul {
+.seccion_principal ul {
   border-bottom: 2px solid black;
   border-top: 2px solid black;
 }
 
-section#seccion_principal li {
+.seccion_principal li {
   border-top: 1px solid #e8e0d6;
 }
 
-section#seccion_principal ul a{
+.seccion_principal ul a{
   color:#FF4A14;
   font-size: 1.2em;
   font-weight: bold;
 }
+
 
 section#seccion_secundaria {
   display: none;
