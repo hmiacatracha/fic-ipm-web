@@ -9,7 +9,6 @@
 		<meta name="viewport" content="device-width, initial-scale=1, maximum-scale=1">
                 <link rel="stylesheet" type="text/css" href="css/new_style.css" />
                 <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
-                <script src="js/test.js"> </script>
 	</head>
 	<body>
           <div id="wrapper">
@@ -17,7 +16,7 @@
                 <nav>
                   <ul class="navigator_ul">
                     <li class="li_header">
-                         <a href="#"> IPM-Practica  </a> 
+                         <a href="#">IPM-Practica</a> 
                     </li>
                     
                  </ul>
@@ -31,56 +30,27 @@
 		<section id="seccion_principal">
         		<form id="nuevo">
         			<input 
-                                  id="nuevo_btn" 
-                                  type="button" 
-                                  alt="Añadir producto"
-                                  name="nuevo_btn"
-                                  onclick="show_seconday_section()"/>
+                                    id="nuevo_btn" 
+                                    type="button" 
+                                    name="nuevo_btn"
+                                    value=" "/>
         		</form>
 			<h3>Lista de Pedidos</h3>
-			<ul id="lista_pedidor">                                
-				<li id="elemento-1">
-					<a href="detalle.html">Ratones</a>
-					<span class="desc">1 enero</span>
-				</li>
-				<li id="elemento-2">
-					<a href="detalle.html">Pantallas</a>
-					<span class="desc">2 febrero</span>
-				</li>
-				<li id="elemento-3">
-					<a href="detalle.html">Impresoras</a>
-					<span class="desc">3 marzo</span>
-				</li>
-
-				<li id="elemento-4">
-					<a href="detalle.html">Teclados</a>
-					<span class="desc">4 abril</span>
-				</li>
-
-				<li id="elemento-5">
-					<a href="detalle.html">Procesadores</a>
-					<span class="desc">5 mayo</span>
-				</li>
-				
-				<li id="elemento-6">
-					<a href="detalle.html">Memoria RAM</a>
-					<span class="desc">6 junio</span>
-				</li>								
-			</ul>
+			<ul id="lista_pedidor"></ul> <!-- This is populated with Javascript -->
 		</section>
 
 		<section id="seccion_secundaria">
 			<h3> Nuevo pedido</h3>
 			<form class="pedido">
-				<div id="sec_2_form_row">
+				<div class="sec_2_form_row">
 					<label>Nombre </label> 
 					<input name="text_nombre" value="" type="text" required/>
 				</div>
-				<div id="sec_2_form_row">
+				<div class="sec_2_form_row">
 					<label>Fecha</label>
 					<input name="text_fecha" value="" type="date" required/>
 				</div>				
-				<div id="sec_2_form_row">
+				<div class="sec_2_form_row">
 					<input type="submit" name="sumit_aceptar" value="Aceptar" />
 					<input type="submit" name="sumit_cancelar" value="Cancelar" />				
                                 </div>
@@ -91,6 +61,8 @@
                     Interfaces Persona Máquina
                 </footer>
                 </div>
+
+                <script src="js/code.js"> </script>
 	</body>
 </html>
 
