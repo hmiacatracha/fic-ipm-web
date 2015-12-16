@@ -77,12 +77,19 @@
 
 // Show secondary section
 function showSecondarySection () {
-
-    // Resets secondary section form before showing
-    document.getElementById('sec_2_form').reset();
+    console.log("showSecondarySection");
 
     var s = document.getElementById('seccion_secundaria');
-    s.style.display = 'block';
+
+    // Only clean and show section if is hidden
+    if (s.style.display !== 'block') {
+        // Resets secondary section form before showing
+        document.getElementById('sec_2_form').reset();
+    
+        console.log("showSecondarySection: displaying secondary section");
+        s.style.display = 'block';
+    } 
+
 }
 
 // Hide secondary section
@@ -96,7 +103,8 @@ function addRowSecondarySection(name, date) {
 
     // Created hyperlink, set url and name
     var a = document.createElement('a');
-    a.href = "detalle.html";
+    a.id = "a_detalle";
+    a.href = "detalle.html?&name=" + name + "&date=" + date;
     a.innerHTML = name; 
 
     // Create span set date
@@ -113,11 +121,16 @@ function addRowSecondarySection(name, date) {
 
 function proccessData () {
     var name = document.getElementById("nombreInput").value;
-    var date =  document.getElementById("fechaInput" ).value;
+    var date = document.getElementById("fechaInput" ).value;
     console.log("proccessData: Nombre: " + name);
     console.log("proccessData: Fecha: " + date);
 
+    // Populate ul list from seccion principal
     addRowSecondarySection(name, date);
+
+    // Save data until tab or browser is closed
+    window.sessionStorage.setItem("name", name);
+    window.sessionStorage.setItem("date", date);
 }
 
 function onClickBinds () {
@@ -125,9 +138,11 @@ function onClickBinds () {
     var nuevo_btn = document.getElementById("nuevo_btn");
     nuevo_btn.onclick = showSecondarySection;                     
 
+    // set submit_cancelar behaviour: hide secondary section
     var submit_cancelar = document.getElementById("submit_cancelar");
     submit_cancelar.onclick = hideSecondarySection;
 
+    // set submit_aceptar behaviour: populate list items
     var submit_aceptar = document.getElementById("submit_aceptar");
     submit_aceptar.onclick = proccessData;
 }
