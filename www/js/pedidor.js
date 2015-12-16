@@ -1,6 +1,5 @@
 // Show secondary section
 function showSecondarySection () {
-    console.log("showSecondarySection");
 
     var s = document.getElementById('seccion_secundaria');
 
@@ -9,7 +8,7 @@ function showSecondarySection () {
         // Resets secondary section form before showing
         document.getElementById('sec_2_form').reset();
     
-        console.log("showSecondarySection: displaying secondary section");
+        console.log("showSecondarySection");
         s.style.animation = "appear 2s";
         s.style.display='block';
     }
@@ -19,9 +18,11 @@ function showSecondarySection () {
 function hideSecondarySection () {
     var s = document.getElementById('seccion_secundaria');
 
-    console.log("hideSecondarySection: hiding secondary section");
-    s.style.animation = "dissapear 2s";
-    s.style.display='none';
+    console.log("hideSecondarySection");
+    s.style.animation = "disappear 2s";
+    setTimeout(function() {
+        s.style.display='none'; }, 2000);
+
 }
 
 function addRowSecondarySection(name, date) {
