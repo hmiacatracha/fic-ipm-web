@@ -52,15 +52,15 @@ function proccessData () {
     console.log("proccessData: Fecha: " + date);
 
     // Populate ul list from seccion principal
-    if (name!== "") {
-        addRowSecondarySection(name, date);
-    }
-
-    // Save data until tab or browser is closed
-    data = "{name:" + name + ", date:" + date + "}" // store data as JSON format
-    window.sessionStorage.setItem(sessionStorage.length, data); // Use number of elements as key
-
-    console.log("proccessData: localStorage current number of items: " + sessionStorage.length);
+    if (name != "") {
+	addRowSecondarySection(name, date);
+	// Save data until tab or browser is closed
+    	data = "{name:" + name + ", date:" + date + "}" // store data as JSON format
+    	window.sessionStorage.setItem(sessionStorage.length, data); // Use number of elements as key
+    	console.log("proccessData: localStorage current number of items: " + sessionStorage.length);
+    }else{
+	alert("Para añadir un pedido es necesario introducir al menos el nombre");
+     }
 }
 
 function onClickBinds () {

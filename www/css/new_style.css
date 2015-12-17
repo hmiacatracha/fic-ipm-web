@@ -23,6 +23,9 @@ a {
   text-decoration: none;
 }
 
+span{
+    margin-left: 0.5em;
+}
 input {
     width:150px;
 }
@@ -113,14 +116,14 @@ section#seccion_secundaria {
 }
 
 #nuevo_btn {
-  background-image: url(../img/orange_plus_small.png);
+  background-image: url(../img/orange_plus_phone.png);
   background-repeat:no-repeat;
   background-color: transparent;
   background-position: 0px 0px; 
   cursor: pointer;
   border: none;  
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
 }
 
 #wrapper { 
@@ -147,6 +150,17 @@ div.sec_2_form_row {
   .li_back {
 		width:65%;
 	}
+
+  #nuevo_btn {
+ 	background-image: url(../img/orange_plus_small.png);
+ 	 background-repeat:no-repeat;
+	  background-color: transparent;
+	  background-position: 0px 0px; 
+	  cursor: pointer;
+	  border: none;  
+	  height: 60px;
+	  width: 60px;
+   }
 }
 
 /* Para Escritorio */
@@ -163,5 +177,15 @@ div.sec_2_form_row {
   .li_back {
 		width:75%;
 	}
+  #nuevo_btn {
+ 	background-image: url(../img/orange_plus_small.png);
+ 	 background-repeat:no-repeat;
+	  background-color: transparent;
+	  background-position: 0px 0px; 
+	  cursor: pointer;
+	  border: none;  
+	  height: 60px;
+	  width: 60px;
+   }
 }
 

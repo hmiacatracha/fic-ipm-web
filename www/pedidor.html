@@ -7,63 +7,60 @@
 		<meta name="author" content="ipm1516_050_p3" />
 		<meta name="author" content="ipm1516_162_p3" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-                <link rel="stylesheet" type="text/css" href="css/new_style.css" />
-                <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+			<link rel="stylesheet" type="text/css" href="css/new_style.css" />
+			<link href='http://fonts.googleapis.com/css?family=Raleway:300'
+				rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-          <div id="wrapper">
-            <div id="wrapper2">
-                <nav>
-                  <ul class="navigator_ul">
-                    <li class="li_header">
-                         <a href="#">IPM-Practica</a> 
-                    </li>
-                    
-                 </ul>
-               </nav>
-             </div>  
-                <header>
-                        <h1>Pedidor</h1>
-                        <h3>Repositorios ipm1516_050_p3 & ipm1516_162_p3</h3>
-                </header>
+		<div id="wrapper">
+			<div id="wrapper2">
+				<nav>
+					<ul class="navigator_ul">
+						<li class="li_header">
+							<a href="#">IPM-Practica</a>
+						</li>
 
-		<section id="seccion_principal">
-        		<form id="nuevo">
-        			<input 
-                                    id="nuevo_btn" 
-                                    type="button" 
-                                    name="nuevo_btn"
-                                    value=" "/>
-        		</form>
-			<h3>Lista de Pedidos</h3>
-			<ul id="lista_pedidor"></ul> <!-- This ul is populated from Javascript -->
-		</section>
-
-		<section id="seccion_secundaria"> <!-- Seccion secundaria is hidden by default -->
-			<h3> Nuevo pedido</h3>
-			<form id="sec_2_form" class="pedido">
-				<div class="sec_2_form_row">
-					<label>Nombre</label> 
-					<input id="nombreInput" name="text_nombre" type="text" required/>
-				</div>
-				<div class="sec_2_form_row">
-					<label>Fecha</label>
-					<input id="fechaInput" name="text_fecha" type="date" required/>
-				</div>				
-				<div class="sec_2_form_row">
-					<input id="submit_aceptar" type="button" name="submit_aceptar" value="Aceptar" />
-					<input id="submit_cancelar" type="button" name="submit_cancelar" value="Cancelar" />				
-                                </div>
-				
-			</form>
-		</section>
-
-                <footer>
-                    Interfaces Persona Máquina
-                </footer>
-                </div>
-
-                <script src="js/pedidor.js"> </script>
+					</ul>
+				</nav>
+			</div>
+			<header>
+				<h1>Pedidor</h1>
+				<h3>Repositorios ipm1516_050_p3 & ipm1516_162_p3</h3>
+			</header>
+			<section id="seccion_principal">
+				<form id="nuevo">
+					<input id="nuevo_btn" type="button" name="nuevo_btn" value=" " />
+				</form>
+				<h3>Lista de Pedidos</h3>
+				<ul id="lista_pedidor"></ul> <!-- This ul is populated from Javascript -->
+			</section>
+			
+			<section id="seccion_secundaria"> <!-- Seccion secundaria is hidden by default -->
+				<h3> Nuevo pedido</h3>
+				<form id="sec_2_form" class="pedido">
+					<div class="sec_2_form_row">
+						<label>Nombre</label>
+						<input id="nombreInput" name="text_nombre" type="text"
+							required />
+					</div>
+					<div class="sec_2_form_row">
+						<label>Fecha</label>
+						<input id="fechaInput" name="text_fecha" type="date"/>
+					</div>
+					<div class="sec_2_form_row">
+						<input id="submit_aceptar" type="button" name="submit_aceptar"
+							value="Aceptar" />
+						<input id="submit_cancelar" type="button" name="submit_cancelar"
+							value="Cancelar" />
+					</div>
+				</form>
+			</section>
+			<footer>
+				Interfaces Persona Máquina
+			</footer>
+		</div>
+		<script src="js/pedidor.js">
+		</script>
 	</body>
 </html>
 
