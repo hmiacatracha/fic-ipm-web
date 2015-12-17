@@ -1,0 +1,66 @@
+Pautas (WCAG) 2.0:
+2.- Adaptable: Un simple layout sin perder información y estructura.
+	-Hacemos uso de cabeceras para recalcar la información relevante de nuestra web
+	-Cada label esta asociado con un elemento input para indicar que debe introducir
+	el usuario.
+	-El orden de la navegación es logica e intuitiva, en nuestro caso nuestra web es sencilla pero se puede
+	apreciar el orden de los elementos.
+	-Características sensoriales: Proporcionamos una serie de características para los usuarios que 
+	 acceden a la web no tengan problemas en leer el contenido dependiendo del tipo de pantalla, ya que 
+	 en nuestra web agregamos para tres tipos de pantallas: movil, mediana y grande. 
+
+3.- Distinguible: Hacer el contenido facil para los usuarios. 
+	-En nuestra web hemos añadido tres colores para realizar un buen contraste:
+		-Colores fuertes para destacar la información mas relevante
+		- Fondo blanco para que se distinga mas el color de las letras sin necesidad de esforzar 
+		  la vista. 
+		- Color negro para las letras que no queremos destacar demasiado pero si queremos que se puedan 
+		  leer facilmente.
+	-La cabecera la distinguimos de modo que se note y que ademas contraste con el resto de la página web.
+	-La imagen del boton añadir 
+
+4.- Accesibilidad del teclado: Hacer la aplicacion disponible por teclado. Si hacemos uso del tab veremos que 
+	nuestra pagina si realizas un enter sobre el elemento por ejemplo de add pues te aparece la sección secundaria. y si le
+	das enter a los botones aceptar y cancelar también realizan la función indicada igual.
+	
+
+5.- Tiempo suficiente: Proporcionar a los usuarios tiempo suficiente para leer y usar el contenido.
+    -Nuestro contenido realiza una animación que proporciona tiempo suficiente, para leerla al empezar
+	y realizar la animación una vez que el usuario de cancelar al introducir datos.
+
+    -Las alertas pueden ser aplazados o suprimidos por el usuario: En nuestro caso
+	proporcionamos de un icono para que el usuario sepa que tiene que completar
+	el campo, si el usuario finalmente opta por no añadir el campo obligatorio
+	es alli entonces cuando mostramos la alerta.
+
+6.- Navegable: Proporcionar maneras de ayudar a los usuarios a navegar en nuestra página.
+	- Añadimos el boton atrás, para que pueda acceder a la pagina pedidor.
+	- La pagina web tiene un titulo descriptivo.
+
+7.- El contenido y la interfaz son comprensibles: 
+	-Indicar el lenguaje en la pagina
+		<html lang="es"	
+	 -Indicar el lenguaje en partes que no 
+8.- Hacer predecibles las páginas webs
+	Cuando los elementos reciben foco los elementos cambian,
+	en nuestro caso lo hemos realizado con el elemento back de nuestra página.
+
+9.- Compatible: Maximinar la compatibilidad con otros agentes, de manera que facilita la accesibilidad
+	-Para esto hemos validado nuestro html y css
+
+-------------------------------------------------------------------------------------------------------
+				ARIA use
+------------------------------------------------------------------------------------------------------
+-No utilizar atributos en el html, mejor hacerlo por el css o java script, en 
+	nuestr caso el area podria estar oculta con este atributo, sin embargo
+	la tenemos en el css
+	<section id="secundaria" aria-hidden="true" >
+	#sedundaria{
+		display:none
+	}
+
+	
+- los elementos 
+
+
+

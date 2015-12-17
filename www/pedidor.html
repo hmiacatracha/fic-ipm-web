@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 	<head>
 		<meta charset="utf-8" />
@@ -27,12 +27,12 @@
 				<h1>Pedidor</h1>
 				<h3>Repositorios ipm1516_050_p3 & ipm1516_162_p3</h3>
 			</header>
-			<section id="seccion_principal">
+			<section id="seccion_principal" role="main">
 				<form id="nuevo">
-					<input id="nuevo_btn" type="button" name="nuevo_btn" value=" " />
+					<input id="nuevo_btn" type="button" name="nuevo_btn" value=" "/>
 				</form>
 				<h3>Lista de Pedidos</h3>
-				<ul id="lista_pedidor"></ul> <!-- This ul is populated from Javascript -->
+				<ul id="lista_pedidor" role="tree"></ul> <!-- This ul is populated from Javascript -->
 			</section>
 			
 			<section id="seccion_secundaria"> <!-- Seccion secundaria is hidden by default -->
@@ -40,18 +40,17 @@
 				<form id="sec_2_form" class="pedido">
 					<div class="sec_2_form_row">
 						<label>Nombre</label>
-						<input id="nombreInput" name="text_nombre" type="text"
-							required />
+						<input id="nombreInput" name="text_nombre" type="text" required/>
 					</div>
 					<div class="sec_2_form_row">
 						<label>Fecha</label>
-						<input id="fechaInput" name="text_fecha" type="date"/>
+						<input id="fechaInput" name="text_fecha" type="date" min="1960-01-01" max="2100-01-01" value=""/>
 					</div>
 					<div class="sec_2_form_row">
 						<input id="submit_aceptar" type="button" name="submit_aceptar"
-							value="Aceptar" />
+							value="Aceptar"/>
 						<input id="submit_cancelar" type="button" name="submit_cancelar"
-							value="Cancelar" />
+							value="Cancelar"/>
 					</div>
 				</form>
 			</section>

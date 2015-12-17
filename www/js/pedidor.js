@@ -11,6 +11,8 @@ function showSecondarySection () {
         console.log("showSecondarySection");
         s.style.animation = "appear 2s";
         s.style.display='block';
+	var nombre = document.getElementById('nombreInput');
+	nombre.focus();
     }
 }
 
