@@ -1,6 +1,5 @@
 // Show secondary section
 function showSecondarySection () {
-    console.log("showSecondarySection");
 
     var s = document.getElementById('seccion_secundaria');
 
@@ -9,16 +8,21 @@ function showSecondarySection () {
         // Resets secondary section form before showing
         document.getElementById('sec_2_form').reset();
     
-        console.log("showSecondarySection: displaying secondary section");
-        s.style.display = 'block';
-    } 
-
+        console.log("showSecondarySection");
+        s.style.animation = "appear 2s";
+        s.style.display='block';
+    }
 }
 
 // Hide secondary section
 function hideSecondarySection () {
     var s = document.getElementById('seccion_secundaria');
-    s.style.display = 'none';
+
+    console.log("hideSecondarySection");
+    s.style.animation = "disappear 2s";
+    setTimeout(function() {
+        s.style.display='none'; }, 2000);
+
 }
 
 function addRowSecondarySection(name, date) {
@@ -33,7 +37,9 @@ function addRowSecondarySection(name, date) {
     // Create span set date
     var span = document.createElement('span');
     span.innerHTML = date;
-    // TODO span or maybe a element lack some styles
+    // TODO span or maybe a element lack some styles. There is no space between
+    // name and date fields. Check if other styles space are afected, like bold
+    // appereance or color, etc.
 
     var li = document.createElement('li');
     li.appendChild(a);
@@ -58,6 +64,7 @@ function proccessData () {
     	data = "{name:" + name + ", date:" + date + "}" // store data as JSON format
     	window.sessionStorage.setItem(sessionStorage.length, data); // Use number of elements as key
     	console.log("proccessData: localStorage current number of items: " + sessionStorage.length);
+	hideSecondarySection();
     }else{
 	alert("Para añadir un pedido es necesario introducir al menos el nombre");
      }
@@ -75,6 +82,7 @@ function onClickBinds () {
     // set submit_aceptar behaviour: populate list items
     var submit_aceptar = document.getElementById("submit_aceptar");
     submit_aceptar.onclick = proccessData;
+        
 }
 
 function reloadData() {
@@ -90,13 +98,13 @@ function reloadData() {
         var date = item.substring(b + ", date: ".length-1, item.length-1);
 
         console.log("reloadData:" + i + " : " + name + " " + date);
-        // TODO characters with accents display uncorrectly
+        // TODO characters with accents display uncorrectly on detalle.html
 
         addRowSecondarySection(name, date);
     }
 }
 
 // Flow starts here
-hideSecondarySection();
 onClickBinds();
 reloadData();
+

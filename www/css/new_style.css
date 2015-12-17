@@ -106,13 +106,13 @@ section#seccion_principal ul a{
 }
 
 section#seccion_secundaria {
-  display: none;
-  padding: 1em;
-  margin-top: 1em;
-  border: 1px solid #000;
-  border-radius: 6px;     
-  box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #EEF5F7 inset;     
-  text-align:center;
+    display: none;
+    padding: 1em;
+    margin-top: 1em;
+    border: 1px solid #000;
+    border-radius: 6px;     
+    box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #EEF5F7 inset;     
+    text-align:center;
 }
 
 #nuevo_btn {
@@ -136,6 +136,21 @@ div.sec_2_form_row {
   margin:0.5em; 
 }
 
+@keyframes appear {
+    from {
+        opacity: 0.0;
+    } to {
+        opacity: 1.0;
+    }
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1.0;
+    } to {
+        opacity: 0.0;
+    }
+}
 
 /* Para tabletas */
 @media only screen and (min-width:600px) {
@@ -169,10 +184,10 @@ div.sec_2_form_row {
     width: 810px;
     margin: 0 auto;
   }
-  
+      
     .li_header{
-		width:25%;
-	}
+        width:25%;
+    }
 
   .li_back {
 		width:75%;
@@ -187,5 +202,9 @@ div.sec_2_form_row {
 	  height: 60px;
 	  width: 60px;
    }
+   .li_back {
+        width:75%;
+    }
 }
+
 
