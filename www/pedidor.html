@@ -7,9 +7,9 @@
 		<meta name="author" content="ipm1516_050_p3" />
 		<meta name="author" content="ipm1516_162_p3" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-			<link rel="stylesheet" type="text/css" href="css/new_style.css" />
-			<link href='http://fonts.googleapis.com/css?family=Raleway:300'
-				rel='stylesheet' type='text/css'>
+                <link rel="stylesheet" type="text/css" href="css/new_style.css" />
+	        <link href='http://fonts.googleapis.com/css?family=Raleway:300'
+	            rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -23,16 +23,32 @@
 					</ul>
 				</nav>
 			</div>
+
 			<header>
 				<h1>Pedidor</h1>
 				<h3>Repositorios ipm1516_050_p3 & ipm1516_162_p3</h3>
 			</header>
+
+                        <form id="nuevo">
+		            <input id="nuevo_btn" type="button" name="nuevo_btn" value=" "/>
+			</form>
+
 			<section id="seccion_principal" role="main">
-				<form id="nuevo">
-					<input id="nuevo_btn" type="button" name="nuevo_btn" value=" "/>
-				</form>
 				<h3>Lista de Pedidos</h3>
-				<ul id="lista_pedidor" role="tree"></ul> <!-- This ul is populated from Javascript -->
+				<ul id="lista_pedidor" role="tree">
+                                        <li id="elemento-1">	
+                                                <a href="detalle.html?&name=Comics&date=2016-01-19">Comics</a>
+                                                <span class="desc">19/01/16</span>
+                                        </li>
+                                        <li id="elemento-2">	
+                                                <a href="detalle.html?&name=Comics&date=">Comics</a>
+                                                <span class="desc"></span>
+                                        </li>
+                                        <li id="elemento-3">	
+                                                <a href="detalle.html?&name=Comics&date=2016-01-18">Comics</a>
+                                                <span class="desc">18/01/16</span>
+                                        </li>
+                                </ul> <!-- This ul is populated from Javascript -->
 			</section>
 			
 			<section id="seccion_secundaria"> <!-- Seccion secundaria is hidden by default -->
